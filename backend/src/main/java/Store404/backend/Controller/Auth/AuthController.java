@@ -1,7 +1,9 @@
 package Store404.backend.Controller.Auth;
 
 import Store404.backend.ApiDocs.SignUp.SignUpApiDocs;
+import Store404.backend.Dto.Request.Auth.LoginRequestDto;
 import Store404.backend.Dto.Request.Auth.SignUpRequestDto;
+import Store404.backend.Dto.Response.Auth.LoginResponseDto;
 import Store404.backend.Dto.Response.Auth.SignUpResponseDto;
 import Store404.backend.Service.Auth.AuthService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -25,5 +27,11 @@ public class AuthController {
     @PostMapping("/sign-up")
     public ResponseEntity<? super SignUpResponseDto> signUp(@RequestBody @Valid SignUpRequestDto requestBody) {
         return authService.signUp(requestBody);
+    }
+
+
+    @PostMapping("/sign-in")
+    public ResponseEntity<? super LoginResponseDto> signIn(@RequestBody @Valid LoginRequestDto requestBody) {
+        return authService.logIn(requestBody);
     }
 }
