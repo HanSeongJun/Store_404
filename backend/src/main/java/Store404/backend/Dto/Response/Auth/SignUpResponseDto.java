@@ -3,14 +3,15 @@ package Store404.backend.Dto.Response.Auth;
 import Store404.backend.Common.ResponseCode;
 import Store404.backend.Common.ResponseMessage;
 import Store404.backend.Dto.Response.ResponseDto;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 @Getter
+@Schema(description = "회원가입 응답 DTO")
 public class SignUpResponseDto extends ResponseDto {
 
-    // ===== 회원가입 응답  DTO ===== //
     public SignUpResponseDto() {
         super(ResponseCode.SUCCESS, ResponseMessage.SUCCESS);
     }

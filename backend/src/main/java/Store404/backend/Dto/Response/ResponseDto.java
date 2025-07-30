@@ -2,6 +2,7 @@ package Store404.backend.Dto.Response;
 
 import Store404.backend.Common.ResponseCode;
 import Store404.backend.Common.ResponseMessage;
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.springframework.http.HttpStatus;
@@ -9,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 
 @Getter
 @AllArgsConstructor
+@Schema(description = "공통 응답 DTO")
 public class ResponseDto {
 
     // ===== 공통 응답 DTO ===== //
