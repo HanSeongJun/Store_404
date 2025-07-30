@@ -1,6 +1,6 @@
 package Store404.backend.Common;
 
-public class ResponseMessage {
+public interface ResponseMessage {
 
     // HTTP Status 200
     String SUCCESS = "Success";

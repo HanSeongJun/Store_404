@@ -1,6 +1,6 @@
 package Store404.backend.Common;
 
-public class ResponseCode {
+public interface ResponseCode {
 
     // HTTP Status 200
     String SUCCESS = "SU";
