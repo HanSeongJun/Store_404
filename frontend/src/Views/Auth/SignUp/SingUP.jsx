@@ -18,7 +18,7 @@ function SingUP() {
                     <form className="Sign-Up-Form">
                         <div className="Sign-Up-Form-Error"></div>
                         <div>
-                            <label htmlFor="email" className="Sign-Up-Input" >
+                            <label htmlFor="email" className="Sign-Up-Input">
                                 이메일*
                             </label>
                             <input id="email" name="email" type="email" placeholder="이메일을 입력하세요" className="input-box"/>

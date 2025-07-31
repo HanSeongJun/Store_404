@@ -1,18 +1,20 @@
 import { useState } from 'react'
 import './App.css'
 import {Route, BrowserRouter as Router, Routes} from "react-router-dom";
-import SingUP from "./Views/Auth/SingUP.jsx";
+import SingUP from "./Views/Auth/SignUp/SingUP.jsx";
+import LogIn from "./Views/Auth/LogIn/LogIn.jsx";
 
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-      <Router>
-        <Routes>
-          <Route path="/signUp" element={<SingUP/>} />
-        </Routes>
-      </Router>
-  )
+    return (
+        <Router>
+            <Routes>
+                <Route path="/signUp" element={<SingUP/>}/>
+                <Route path="/login" element={<LogIn/>}/>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App
