@@ -1,0 +1,85 @@
+.Log-In-Page {
+    min-height: 100vh;
+    background-color: #F9FAFB;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 3rem 1rem;
+}
+
+.Log-In-Title-Container {
+    max-width: 28rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Log-In-Box {
+    text-align: center;
+}
+
+.Log-In-Title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.Log-In-Title-Detail {
+    color: #6B7280;
+}
+
+.Log-In-Form-Container {
+    margin-top: 2rem;
+    max-width: 28rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Log-In-Form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.Log-In-Form-Error {
+    background-color: #FEF2F2;
+    border: 1px solid #FECACA;
+    color: #DC2626;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.Log-In-Input {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+}
+
+.Log-In-Button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.Log-In-Form-Link {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.Log-In-Form-Link-Text {
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+.Log-In-Form-Link-Text-Link {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
