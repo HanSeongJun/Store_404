@@ -1,6 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 컬러 팔레트*/
 :root {
   font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
 
   --green: #4A7C59;
@@ -22,8 +27,14 @@
   --orange: #FF9500;
 }
 
-body {
+/* 기본 스타일 */
+* {
   box-sizing: border-box;
+}
+
+body {
+  color: var(--gray-900);
+  background-color: #FFFFFF;
 }
 
 .card {
