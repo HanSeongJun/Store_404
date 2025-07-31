@@ -1,0 +1,70 @@
+.Sign-Up-Page {
+    min-height: 100vh;
+    background-color: #F9FAFB;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 3rem 1rem;
+}
+
+.Sign-Up-Title-Container {
+    min-height: 28rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.Sign-Up-Box {
+    text-align: center;
+}
+
+.Sign-Up-Title {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.Sing-Up-Title-Detail {
+    color: #6B7280;
+}
+
+.Sign-Up-Form-Container {
+    margin-top: 2rem;
+    max-width: 28rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Sign-Up-Form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1.5rem;
+}
+
+.Sign-Up-Form-Error {
+    background-color: #FEF2F2;
+
+    border: 1px solid #FECACA;
+    color: #DC2626;
+
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.Sign-Up-Input {
+    display: block;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+
+    margin-bottom: 0.5rem;
+}
+
+
+
+
