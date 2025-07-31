@@ -1,5 +1,6 @@
 package Store404.backend.Controller.Auth;
 
+import Store404.backend.ApiDocs.LogIn.LoginApiDocs;
 import Store404.backend.ApiDocs.SignUp.SignUpApiDocs;
 import Store404.backend.Dto.Request.Auth.LoginRequestDto;
 import Store404.backend.Dto.Request.Auth.SignUpRequestDto;
@@ -29,8 +30,8 @@ public class AuthController {
         return authService.signUp(requestBody);
     }
 
-
-    @PostMapping("/sign-in")
+    @LoginApiDocs
+    @PostMapping("/log-in")
     public ResponseEntity<? super LoginResponseDto> signIn(@RequestBody @Valid LoginRequestDto requestBody) {
         return authService.logIn(requestBody);
     }
