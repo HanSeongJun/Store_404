@@ -55,12 +55,12 @@ function SingUP() {
                         </div>
 
                         <div>
-                            <button>{'회원가입'}</button>
+                            <button className="button Sign-Up-Button">{'회원가입'}</button>
                         </div>
-                        <div>
-                            <p>
+                        <div className="Sign-Up-Form-Link">
+                            <p className="Sign-Up-Form-Link-Text">
                                 이미 계정이 있으신가요?{''}
-                                <Link to="/">
+                                <Link to="/" className="Sign-Up-Form-Link-Text-Link">
                                     로그인
                                 </Link>
                             </p>
