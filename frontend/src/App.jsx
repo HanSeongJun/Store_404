@@ -11,12 +11,12 @@ function App() {
 
     return (
         <Router>
+            <Header/>
             <Routes>
                 <Route path="/signUp" element={<SingUP/>}/>
                 <Route path="/login" element={<LogIn/>}/>
-                <Route path="/2" element={<Header/>}/>
-                <Route path="/" element={<Footer/>}/>
             </Routes>
+            <Footer/>
         </Router>
     );
 }
