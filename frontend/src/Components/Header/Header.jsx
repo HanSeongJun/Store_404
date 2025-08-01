@@ -1,9 +1,40 @@
 import {Link} from "react-router-dom";
 import "./Style.css";
 import logoImage from "../../Assets/logo.png";
+import {useEffect, useState} from "react";
+
 
 function Header() {
 
+    const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+    const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
+
+
+    const handleUserMenuClick = () => {
+        setIsUserMenuOpen(!isUserMenuOpen);
+        setIsCategoryMenuOpen(false);
+    }
+
+    const handleCategoryMenuClick = () => {
+        setIsCategoryMenuOpen(!isCategoryMenuOpen);
+        setIsUserMenuOpen(false);
+    }
+
+    // 드롭다운 외부 클릭 시 닫기
+    useEffect(() => {
+
+        const handleClickOutside = (event) => {
+            if (!event.target.closest('[data-dropdown]')) {
+                setIsUserMenuOpen(false);
+                setIsCategoryMenuOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        }
+    })
 
 
     return (
@@ -31,17 +62,19 @@ function Header() {
                         <Link to="/" className="Header-User-Menu-Link">
                             관리자
                         </Link>
-                        <div className="Header-User-Menu-Member">
-                            <button className="Header-User-Menu-Button">회원 이름
+                        <div className="Header-User-Menu-Member" data-dropdown>
+                            <button className="Header-User-Menu-Button" onClick={handleUserMenuClick}>회원 이름
                                 <span>▼</span>
                             </button>
-                            <div className="Header-User-Menu-Member-Dropdown">
-                                <div className="Header-User-Menu-Member-Dropdown-Info">
-                                    <div className="Header-User-Menu-Member-Dropdown-Hello">안녕하세요,</div>
-                                    <div className="Header-User-Menu-Member-Dropdown-Member">사용자 님.</div>
+                            {isUserMenuOpen && (
+                                <div className="Header-User-Menu-Member-Dropdown">
+                                    <div className="Header-User-Menu-Member-Dropdown-Info">
+                                        <div className="Header-User-Menu-Member-Dropdown-Hello">안녕하세요,</div>
+                                        <div className="Header-User-Menu-Member-Dropdown-Member">사용자 님.</div>
+                                    </div>
+                                    <button className="Header-User-Menu-Logout-Button">로그아웃</button>
                                 </div>
-                                <button className="Header-User-Menu-Logout-Button">로그아웃</button>
-                            </div>
+                            )}
                         </div>
                     </>
 
@@ -58,24 +91,26 @@ function Header() {
 
             <nav className="Header-Nav">
                 <div className="Header-Nav-Container">
-                    <div className="Header-Nav-Category">
-                        <button className="Header-Nav-Category-Button">
+                    <div className="Header-Nav-Category" data-dropdown>
+                        <button className="Header-Nav-Category-Button" onClick={handleCategoryMenuClick}>
                             카테고리<span>▼</span>
                         </button>
-                        <div className="Header-Nav-Category-Dropdown">
-                            <Link to="/" className="Header-Nav-Category-Dropdown-Link">
-                                카테고리
-                            </Link>
-                        </div>
+                        {isCategoryMenuOpen && (
+                            <div className="Header-Nav-Category-Dropdown">
+                                <Link to="/" className="Header-Nav-Category-Dropdown-Link">
+                                    카테고리
+                                </Link>
+                            </div>
+                        )}
                     </div>
 
-                    <Link to="/" className="Header-Nav-Link">
+                    <Link to="/" className="nav Header-Nav-Link">
                         전체상품
                     </Link>
-                    <Link to="/" className="Header-Nav-Link">
+                    <Link to="/" className="nav Header-Nav-Link">
                         인기상품
                     </Link>
-                    <Link to="/" className="Header-Nav-Link">
+                    <Link to="/" className="nav Header-Nav-Link">
                         신상품
                     </Link>
                 </div>

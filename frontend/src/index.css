@@ -75,3 +75,12 @@ body {
 .button:hover {
   background-color: var(--green-light);
 }
+
+.nav {
+  color: var(--gray-700);
+  transition: color 0.2s;
+}
+
+.nav:hover {
+  color: var(--green);
+}
