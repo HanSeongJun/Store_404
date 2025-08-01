@@ -35,6 +35,8 @@ function LogIn() {
 
         try {
             await AuthService.login(formData.email, formData.password);
+            // 사용자 상태 변경 이벤트 발생 (AuthService에서 이미 발생시키지만 확실히 하기 위해)
+            window.dispatchEvent(new Event('userStateChanged'));
             navigate(from, { replace: true });
         } catch (error) {
             setError(error.response?.data?.message || '로그인에 실패했습니다.');

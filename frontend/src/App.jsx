@@ -13,6 +13,7 @@ function App() {
         <Router>
             <Header/>
             <Routes>
+                <Route path="/" element={<div className="home-page">홈페이지</div>}/>
                 <Route path="/signUp" element={<SingUP/>}/>
                 <Route path="/login" element={<LogIn/>}/>
             </Routes>
