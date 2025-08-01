@@ -1,0 +1,79 @@
+.Footer {
+    background-color: #F9FAFB;
+    border-top: 1px solid #E5E7EB;
+    margin-top: auto;
+}
+
+.Footer-Container {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.Footer-Company-Text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.Footer-Company-Description {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.Footer-Company-Icons {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.Footer-Section-Title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.Footer-Link-List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Footer-Link-Item {
+    margin-bottom: 0.5rem;
+}
+
+.Footer-Link {
+    color: #6B7280;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+.Footer-Company-Detail {
+    color: #6B7280;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.Footer-Company-Detail p {
+    margin-bottom: 0.5rem;
+}
+
+.Footer-Copyright {
+    border-top: 1px solid #E5E7EB;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.Footer-Copyright p {
+    color: #9CA3AF;
+    font-size: 0.75rem;
+    margin: 0;
+}
