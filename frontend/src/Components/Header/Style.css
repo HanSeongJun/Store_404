@@ -1,0 +1,216 @@
+.Header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Header-Container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    border-bottom: 1px solid #F3F4F6;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.Header-Logo {
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.Header-Logo-Image {
+    height: 70px;
+    width: auto;
+    display: block;
+    margin: 0;
+}
+
+.Header-Search {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 2rem;
+}
+
+.Header-Search-Container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.Header-Search-Input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid #E5E7EB;
+    border-radius: 0.5rem;
+
+    font-size: 0.875rem;
+    outline: none;
+    height: 44px;
+    box-sizing: border-box;
+}
+
+.Header-Search-Button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Header-User-Menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.Header-User-Menu-Link {
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.Header-User-Menu-Member {
+    position: relative;
+}
+
+.Header-User-Menu-Button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+}
+
+.Header-User-Menu-Member-Dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 150px;
+    margin-top: 0.5rem;
+}
+
+.Header-User-Menu-Member-Dropdown-Info {
+    padding: 0.5rem;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.Header-User-Menu-Member-Dropdown-Hello {
+    font-size: 0.75rem;
+    color: #6B7280;
+}
+
+.Header-User-Menu-Member-Dropdown-Member {
+    font-weight: 500;
+}
+
+.Header-User-Menu-Logout-Button {
+    width: 100%;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.Header-User-Menu-Login {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.Header-User-Menu-Login-Link {
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+.Header-Nav {
+    padding: 1rem 0;
+}
+
+.Header-Nav-Container {
+    display: flex;
+    justify-items: center;
+    gap: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+.Header-Nav-Category {
+    position: relative;
+}
+
+.Header-Nav-Category-Button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+}
+
+.Header-Nav-Category-Dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 200px;
+    margin-top: 0.5rem;
+}
+
+.Header-Nav-Category-Dropdown-Link {
+    display: block;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #374151;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #F3F4F6;
+}
+
+.Header-Nav-Link-All {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+}
