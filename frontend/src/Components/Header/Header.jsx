@@ -3,26 +3,27 @@ import "./Style.css";
 import logoImage from "../../Assets/logo.png";
 import {useEffect, useState} from "react";
 
-
+//          component: 헤더 컴포넌트          //
 function Header() {
 
+    //          state: 사용자 메뉴 드랍다운 상태          //
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+    //          state: 카테고리 메뉴 드랍다운 상태          //
     const [isCategoryMenuOpen, setIsCategoryMenuOpen] = useState(false);
 
-
+    //          event handler: 사용자 메뉴 드랍다운 핸들러          //
     const handleUserMenuClick = () => {
         setIsUserMenuOpen(!isUserMenuOpen);
         setIsCategoryMenuOpen(false);
     }
-
+    //          event handler: 카테고리 메뉴 드랍다운 핸들러          //
     const handleCategoryMenuClick = () => {
         setIsCategoryMenuOpen(!isCategoryMenuOpen);
         setIsUserMenuOpen(false);
     }
 
-    // 드롭다운 외부 클릭 시 닫기
+    //           effect: 드롭다운 외부 클릭 시 닫기          //
     useEffect(() => {
-
         const handleClickOutside = (event) => {
             if (!event.target.closest('[data-dropdown]')) {
                 setIsUserMenuOpen(false);
@@ -36,7 +37,7 @@ function Header() {
         }
     })
 
-
+    //           render: Header 렌더링          //
     return (
         <header className="Header">
             <div className="Header-Container">
@@ -48,8 +49,20 @@ function Header() {
                 {/* 검색 창 */}
                 <form className="Header-Search">
                     <div className="Header-Search-Container">
-                        <input className="Header-Search-Input" />
-                        <button className="Header-Search-Button">검색</button>
+                        <input type="text" placeholder="검색어를 입력해주세요" className="Header-Search-Input" />
+                        <button className="Header-Search-Button" >
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="SearchIcon"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="var(--green)"
+                            width="20"
+                            height="20">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 104 10.5a6.5 6.5 0 0013 0z" />
+                            </svg>
+                        </button>
                     </div>
                 </form>
 
@@ -93,7 +106,12 @@ function Header() {
                 <div className="Header-Nav-Container">
                     <div className="Header-Nav-Category" data-dropdown>
                         <button className="Header-Nav-Category-Button" onClick={handleCategoryMenuClick}>
-                            카테고리<span>▼</span>
+                            <span className="HamburgerIcon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                            <span className="CategoryText">카테고리</span>
                         </button>
                         {isCategoryMenuOpen && (
                             <div className="Header-Nav-Category-Dropdown">
