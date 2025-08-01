@@ -25,6 +25,41 @@
           <option name="color" value="#98C379" />
           <option name="type" value="*" />
         </CustomTag>
+        <CustomTag>
+          <option name="backgroundColor" value="#9885CA" />
+          <option name="bold" value="true" />
+          <option name="color" value="#000000" />
+          <option name="italic" value="true" />
+          <option name="type" value="event handler" />
+        </CustomTag>
+        <CustomTag>
+          <option name="backgroundColor" value="#65B669" />
+          <option name="bold" value="true" />
+          <option name="color" value="#000000" />
+          <option name="italic" value="true" />
+          <option name="type" value="effect" />
+        </CustomTag>
+        <CustomTag>
+          <option name="backgroundColor" value="#5A94EB" />
+          <option name="bold" value="true" />
+          <option name="color" value="#000000" />
+          <option name="italic" value="true" />
+          <option name="type" value="state" />
+        </CustomTag>
+        <CustomTag>
+          <option name="backgroundColor" value="#D7D239" />
+          <option name="bold" value="true" />
+          <option name="color" value="#000000" />
+          <option name="italic" value="true" />
+          <option name="type" value="render" />
+        </CustomTag>
+        <CustomTag>
+          <option name="backgroundColor" value="#E66663" />
+          <option name="bold" value="true" />
+          <option name="color" value="#000000" />
+          <option name="italic" value="true" />
+          <option name="type" value="component" />
+        </CustomTag>
       </list>
     </option>
   </component>
