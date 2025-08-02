@@ -31,4 +31,9 @@ public class CategoryController {
     public ResponseEntity<? super CategoryResponseDto> createCategory(@RequestBody CategoryRequestDto dto) {
         return categoryService.createCategory(dto);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<? super CategoryResponseDto> updateCategory(@PathVariable Long id, @RequestBody CategoryRequestDto dto) {
+        return categoryService.updateCategory(id, dto);
+    }
 }

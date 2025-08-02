@@ -1,4 +1,4 @@
-package Store404.backend.ApiDocs.SignUp;
+package Store404.backend.ApiDocs.Auth.LogIn;
 
 import Store404.backend.ApiDocs.InternalServerError;
 import Store404.backend.ApiDocs.Success;
@@ -14,26 +14,25 @@ import java.lang.annotation.*;
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Operation(summary = "회원가입", description = "사용자 정보를 받아 회원가입 처리")
+@Operation(summary = "로그인", description = "사용자 정보를 받아 로그인 처리")
 @ApiResponses(value = {
         @ApiResponse(
                 responseCode = "200",
-                description = "회원가입 성공",
+                description = "로그인 성공",
                 content = @Content(
                         mediaType = "application/json",
                         schema = @Schema(implementation = Success.class),
-                        examples = @ExampleObject(value = "{ \"code\": \"SU\", \"message\": \"Success\" }")
+                        examples = @ExampleObject(value = "{ \"code\": \"SU\", \"message\": \"Success\", \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c\", \"expirationTime\": \"3600\" }")
                 )
         ),
         @ApiResponse(
                 responseCode = "400",
-                description = "잘못된 요청 (중복된 이메일/닉네임/전화번호)",
+                description = "유효성 검사 실패",
                 content = @Content(
                         mediaType = "application/json",
-                        schema = @Schema(implementation = SignUpBadRequest.class),
+                        schema = @Schema(implementation = LoginBadRequest.class),
                         examples = {
-                                @ExampleObject(name = "이메일 중복", value = "{ \"code\": \"DE\", \"message\": \"Duplicate Email.\" }"),
-                                @ExampleObject(name = "전화번호 중복", value = "{ \"code\": \"DT\", \"message\": \"Duplicate Tel Number.\" }")
+                                @ExampleObject(name = "유효성 검사 실패", value = "{ \"code\": \"VF\", \"message\": \"Validation failed.\" }"),
                         }
                 )
         ),
@@ -47,5 +46,5 @@ import java.lang.annotation.*;
                 )
         )
 })
-public @interface SignUpApiDocs {
+public @interface LoginApiDocs {
 }

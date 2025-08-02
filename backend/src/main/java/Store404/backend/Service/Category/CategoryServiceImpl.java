@@ -83,6 +83,7 @@ public class CategoryServiceImpl implements CategoryService {
         }
     }
 
+    @Transactional
     @Override
     public ResponseEntity<? super CategoryResponseDto> updateCategory(Long id, CategoryRequestDto dto) {
 

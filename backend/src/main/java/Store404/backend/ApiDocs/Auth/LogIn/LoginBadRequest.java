@@ -1,4 +1,4 @@
-package Store404.backend.ApiDocs.LogIn;
+package Store404.backend.ApiDocs.Auth.LogIn;
 
 import Store404.backend.Dto.Response.ResponseDto;
 import io.swagger.v3.oas.annotations.media.Schema;

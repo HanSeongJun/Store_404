@@ -9,11 +9,9 @@ import java.util.List;
 
 public interface CategoryService {
 
-    public List<CategoryRequestDto> getAllCategories();
-
-    public ResponseEntity<? super CategoryResponseDto> getCategoryById(Long id, CategoryRequestDto dto);
-    public ResponseEntity<? super CategoryResponseDto> createCategory(CategoryRequestDto dto);
-    public ResponseEntity<? super CategoryResponseDto> updateCategory(Long id, CategoryRequestDto dto);
-
-    public void deleteCategory(Long id);
+    List<CategoryRequestDto> getAllCategories();
+    ResponseEntity<? super CategoryResponseDto> getCategoryById(Long id, CategoryRequestDto dto);
+    ResponseEntity<? super CategoryResponseDto> createCategory(CategoryRequestDto dto);
+    ResponseEntity<? super CategoryResponseDto> updateCategory(Long id, CategoryRequestDto dto);
+    void deleteCategory(Long id);
 }

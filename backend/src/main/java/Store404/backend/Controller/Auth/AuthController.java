@@ -1,7 +1,7 @@
 package Store404.backend.Controller.Auth;
 
-import Store404.backend.ApiDocs.LogIn.LoginApiDocs;
-import Store404.backend.ApiDocs.SignUp.SignUpApiDocs;
+import Store404.backend.ApiDocs.Auth.LogIn.LoginApiDocs;
+import Store404.backend.ApiDocs.Auth.SignUp.SignUpApiDocs;
 import Store404.backend.Dto.Request.Auth.LoginRequestDto;
 import Store404.backend.Dto.Request.Auth.SignUpRequestDto;
 import Store404.backend.Dto.Response.Auth.LoginResponseDto;
