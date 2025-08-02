@@ -1,5 +1,6 @@
 package Store404.backend.Entity.Product;
 
+import Store404.backend.Entity.Category.Category;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -67,7 +68,11 @@ public class Product {
         updatedAt = LocalDateTime.now();
     }
 
-    // TODO: 카테고리 관계
+    // 카테고리 관계
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    private Category category;
+
     // TODO: 장바구니 관계
     // TODO: 주문 상품 관계
 

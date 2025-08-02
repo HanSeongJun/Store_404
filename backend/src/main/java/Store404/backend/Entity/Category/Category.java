@@ -1,7 +1,11 @@
 package Store404.backend.Entity.Category;
 
+import Store404.backend.Entity.Product.Product;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "category")
@@ -21,5 +25,7 @@ public class Category {
 
     private String description;
 
-    // TODO 상품 관계
+    // 상품 관계
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Product> products = new ArrayList<>();
 }
