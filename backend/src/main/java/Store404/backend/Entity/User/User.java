@@ -1,5 +1,6 @@
 package Store404.backend.Entity.User;
 
+import Store404.backend.Entity.Product.CartItem;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
@@ -7,6 +8,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -55,6 +57,9 @@ public class User{
         updatedAt = LocalDateTime.now();
     }
 
-    // TODO: 장바구니 관계
+    // 장바구니 관계
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<CartItem> cartItems = new ArrayList<>();
+
     // TODO: 주문 관계
 }
