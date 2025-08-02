@@ -7,11 +7,13 @@ public interface ResponseCode {
 
     // HTTP Status 400
     String VALIDATION_FAILED = "VF";
+
+    // HTTP Status 400 - 회원가입
     String DUPLICATE_EMAIL = "DE";
     String DUPLICATE_TEL_NUMBER = "DT";
-    String NOT_EXIST_USER = "NU";
-    String NOT_EXIST_BOARD = "NB";
 
+    // HTTP Status 400 - 카테고리
+    String NOT_EXIST_CATEGORY = "NC";
     String DUPLICATE_CATEGORY_NAME = "DCN";
 
     // HTTP Status 401
