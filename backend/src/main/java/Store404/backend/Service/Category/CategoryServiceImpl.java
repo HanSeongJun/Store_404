@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -120,8 +119,32 @@ public class CategoryServiceImpl implements CategoryService {
         }
     }
 
+    @Transactional
     @Override
-    public void deleteCategory(Long id) {
+    public ResponseEntity<? super CategoryResponseDto> deleteCategory(Long id) {
+        try {
 
+            // 해당 ID의 카테고리가 존재하는지 확인
+            Category category = categoryRepository.findById(id)
+                    .orElse(null);
+
+            // 카테고리가 존재하지 않는 경우
+            if (category == null) {
+                return CategoryResponseDto.notExistedCategory();
+            }
+
+            if (!category.getProducts().isEmpty()) {
+                throw new IllegalStateException("상품이 등록된 카테고리는 삭제할 수 없습니다.");
+            }
+
+            // 카테고리 삭제
+            categoryRepository.deleteById(id);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            return CategoryResponseDto.databaseError();
+        }
+
+        return CategoryResponseDto.success();
     }
 }

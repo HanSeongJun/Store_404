@@ -13,5 +13,5 @@ public interface CategoryService {
     ResponseEntity<? super CategoryResponseDto> getCategoryById(Long id, CategoryRequestDto dto);
     ResponseEntity<? super CategoryResponseDto> createCategory(CategoryRequestDto dto);
     ResponseEntity<? super CategoryResponseDto> updateCategory(Long id, CategoryRequestDto dto);
-    void deleteCategory(Long id);
+    ResponseEntity<? super CategoryResponseDto> deleteCategory(Long id);
 }

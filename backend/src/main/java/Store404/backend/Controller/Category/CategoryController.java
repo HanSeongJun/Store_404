@@ -14,9 +14,9 @@ import java.util.List;
 @RequiredArgsConstructor
 @CrossOrigin
 public class CategoryController {
-    
+
     private final CategoryService categoryService;
-    
+
     @GetMapping
     public List<CategoryRequestDto> getAllCategories() {
         return categoryService.getAllCategories();
@@ -35,5 +35,10 @@ public class CategoryController {
     @PutMapping("/{id}")
     public ResponseEntity<? super CategoryResponseDto> updateCategory(@PathVariable Long id, @RequestBody CategoryRequestDto dto) {
         return categoryService.updateCategory(id, dto);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<? super CategoryResponseDto> deleteCategory(@PathVariable Long id) {
+        return categoryService.deleteCategory(id);
     }
 }
