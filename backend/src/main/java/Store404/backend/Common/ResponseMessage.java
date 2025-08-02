@@ -12,6 +12,7 @@ public interface ResponseMessage {
     String DUPLICATE_TEL_NUMBER = "Duplicate Tel Number.";
     String NOT_EXIST_USER = "This user does not exist.";
     String NOT_EXIST_BOARD = "This board does not exist.";
+    String DUPLICATE_CATEGORY_NAME = "Duplicate Category Name.";
 
     // HTTP Status 401
     String SIGN_IN_FAIL = "Login Information Mismatch.";
