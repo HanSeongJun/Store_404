@@ -26,6 +26,7 @@ public class CategoryRequestDto {
     @Schema(description = "카테고리 설명", example = "전자제품 카테고리 입니다.")
     private String description;
 
+    @Schema
     public static CategoryRequestDto from(Category category) {
         return CategoryRequestDto.builder()
                 .id(category.getId())
